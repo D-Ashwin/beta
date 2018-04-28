@@ -1,0 +1,48 @@
+
+div {
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+	overflow:hidden;
+}
+a:link{
+color:lightblue;
+}
+a:visited{
+color:lightblue;
+background-color:yellow;
+}
+a:hover{
+background-color:yellow;
+
+}
+a:active{
+background-color:yellow;
+}
+p:hover {
+background-color: lightblue;
+}
+input:focus{
+background-color: lightblue;
+}
+p::first-line{
+color:red;
+}
+p::first-letter{
+color:red;
+font-size:xx-large;
+}
+p::before{
+content:url("smiley.gif");
+color:red;
+}
+p::after{
+content:url("smiley.gif");
+color:red;
+}
+img{
+opacity:0.2;
+}
+img:hover{
+opacity:1.0;
+}

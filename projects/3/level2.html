@@ -1,0 +1,78 @@
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<title>Level 2 - BOT Security</title>
+<style>
+body{
+ background:url("img/2.jpg");
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+}
+h1{
+color:white;
+}
+#helloDiv{
+color:black;
+}
+#B1{
+border:2px;
+border-style:dotted;
+border-color:red;
+border-radius:20px;
+height:50px;
+width:80px;
+}
+#BotBootInput{
+border:dotted;
+border-color:grey;
+border-radius:10px;
+}
+</style>
+
+    <script type="text/javascript">
+    var a = Math.ceil(Math.random() * 10);
+    var b = Math.ceil(Math.random() * 10);
+	var c = Math.ceil(Math.random() * 10); 
+	var d = Math.ceil(Math.random() * 10); 
+    var e = a + b - c + d;
+    function DrawBotBoot()
+    {
+        document.write("<h2>What is </h2>"+ a + " + " + b + " - " + c + " + " + d + " = ");
+        document.write("<input id='BotBootInput' type='text' maxlength='3' size='18' placeholder='Your Answer HERE'/>");
+    }    
+    function ValidBotBoot(){
+        var f = document.getElementById('BotBootInput').value;
+        if (f == e) {
+		alert( 'Correct ANSWER !!!' );
+        location.href="level3.html";  
+		}		
+        else
+    {
+        alert( 'Oops... You are not the authorised user !!! \n Byeeee...' );
+        location.href="error.html";
+    }
+	}
+    </script>
+	
+
+</head>
+
+<body>
+<center><br>
+<h1>Looks like you entered the correct password !<br>
+Let our system confirms that you are not a BOT !<br><br>
+</h1></center>
+
+<div id="helloDiv" align="center">
+
+
+
+<script type="text/javascript">DrawBotBoot()</script>
+<br><br><br>
+<input type="button" value="Check" onclick="javascript:ValidBotBoot()" id="B1"/>
+
+</div>
+</body>
+
+</html>

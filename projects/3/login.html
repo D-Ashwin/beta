@@ -1,0 +1,100 @@
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<title>Security Level 1- Check</title>
+<style>
+body{
+ background:url("img/2.jpg");
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+}
+a{
+color:white;
+display:inline-block;
+margin-top:50px;
+margin-bottom:50px;
+text-decoration:none;
+border-style:groove;
+border-color:white;
+border-radius:20px;
+padding:15px;
+cellpadding:20px;
+}
+h1{
+color:white;
+}
+#in1,#in2{
+color:white;
+
+}
+table{
+border-style:solid;
+ border:3;
+ border-color:white;
+ border-radius:10px;
+}
+label{
+ color:white;
+ font-size:25px;
+ text-decoration:underline;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<BR><BR>
+<form>
+<center><BR><BR>
+<label>LOGIN HERE</label>
+<br><br><h2>Security Level 1 </h2>
+<table>
+<tr>
+<td height="100" width="100">User Name</td>
+<td height="100" width="200">
+<input type="text" placeholder="Username" id="user" /></td><br></td>
+</tr>
+<tr>
+<td height="60" width="100">Password</td>
+<td height="60" width="50">
+<input type="password" placeholder="Password" id="pass" /></td><br></td>
+</tr>
+
+
+
+<tr>
+<td height="60" colspan="2">
+<center>
+
+<input type="button" value="Login"  onclick="javascript:validate()">
+
+</center></td>
+</tr>
+</table>
+
+<br>
+</center>
+</form>
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("user").value == "test"
+       && document.getElementById("pass").value == "test" )
+    {
+        alert( "Login Successfull !" );
+        location.href="level2.html";
+    }
+    else
+    {
+        alert( "Oops... You are not the authorised user !!! \n Byeeee..." );
+        location.href="error.html";
+    }
+}
+</script>
+</div>
+
+<footer align="center">&copyCopyright. Design By &copy 3 Level Security </footer>
+</body>
+</html>

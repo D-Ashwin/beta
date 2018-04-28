@@ -1,0 +1,81 @@
+.fluid-container{
+  background-color: #F4F4F4;
+}
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+.mydiv{
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  position: absolute;
+  font-family: times new roman;
+  margin-top: 110px;
+  margin-left: 220px;
+
+}
+#sp{
+  color: white;
+  font-size: 28px;
+  height: 340px;
+  background-color: black;
+  opacity: 0.5;
+  padding: 50px;
+  margin: 50px;
+}
+.p1{
+  font-size: 20px;
+  color: white;
+}
+.hd{
+  font-family: Lucida Console;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  color: white;
+}
+#particles-js{
+  width: 100%;
+  height: 280px;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+}
+.carousel-caption,h3{
+  font-color: black;
+  font-size: 30px;
+
+}
+.my-white{
+  background-color: white;
+  width: 100%;
+  height: 450px;
+}
+.my-grey{
+  background-color: #F4F4F;
+  width: 100%;
+  height: 350px;
+  padding: 10px;
+  color: ##676A74;
+}
+.my-green{
+  background-color: #1ab394;
+  width: 100%;
+  height: 350px;
+  padding: 10px;
+}
+
+footer{
+  background-color: #11141C;
+  height: 60px;
+  color: grey;
+  padding: 20px;
+  text-align: center;
+}

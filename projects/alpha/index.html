@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contact Us</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Alpha crawler is minor project of Team ACD. Team ACD is a group of two 3rd year students , D.Ashwin and Chandan Singh Rajput. This is a very basic crawler which will index all the files in the given website." />
+		<meta name="keywords" content="crawler,Alpha crawler,D.Ashwin,Chandan singh rajput,minor project,SVCE" />
+		<script type="text/javascript">
+
+    var charIndex = -1;
+
+    var stringLength = 0;
+
+    var inputText;
+
+    function writeContent(init){
+
+        if(init){
+
+            inputText = document.getElementById('contentToWrite').innerHTML;
+
+        }
+
+        if(charIndex==-1){
+
+            charIndex = 0;
+
+            stringLength = inputText.length;
+
+        }
+
+        var initString = document.getElementById('myContent').innerHTML;
+
+        initString = initString.replace(/<SPAN.*$/gi,"");
+
+
+
+        var theChar = inputText.charAt(charIndex);
+
+           var nextFourChars = inputText.substr(charIndex,4);
+
+           if(nextFourChars=='<BR>' || nextFourChars=='<br>'){
+
+               theChar  = '<BR>';
+
+               charIndex+=3;
+
+           }
+
+        initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";
+
+        document.getElementById('myContent').innerHTML = initString;
+
+
+
+        charIndex = charIndex/1 +1;
+
+        if(charIndex%2==1){
+
+             document.getElementById('blink').style.display='none';
+
+        }else{
+
+             document.getElementById('blink').style.display='inline';
+
+        }
+
+
+
+        if(charIndex<=stringLength){
+
+            setTimeout('writeContent(false)',40);
+
+        }else{
+
+            blinkSpan();
+
+        }
+
+    }
+
+
+
+    var currentStyle = 'inline';
+
+    function blinkSpan(){
+
+        if(currentStyle=='inline'){
+
+            currentStyle='none';
+
+        }else{
+
+            currentStyle='inline';
+
+        }
+
+        document.getElementById('blink').style.display = currentStyle;
+
+        setTimeout('blinkSpan()',50);
+
+
+
+    }
+
+    
+
+    
+
+msg = "--==  ALPHA Crawler By D.Ashwin || Chandan Singh Rajput || Dheeraj Bhatia ==--"
+
+
+msg = " " + msg;pos = 0;
+
+function scrollMSG() {
+
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+
+pos++;
+
+if (pos >  msg.length) pos = 0
+
+window.setTimeout("scrollMSG()",200);
+
+}
+
+scrollMSG();
+
+</script>
+		
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+	<style>
+	body{
+	background-color:black;
+	color:#00FF00;
+	font-family:Iceland;
+	}
+	h1{
+	color:red;
+	}
+	
+	
+	
+	</style>
+	</head>
+	<body>
+			
+                    <!--     TYPER -->
+<div id="myContent">
+<h1><u>Contact Us</u></h1><center>
+<pre>
+ ______     __         ______   __  __     ______    
+/\  __ \   /\ \       /\  == \ /\ \_\ \   /\  __ \   
+\ \  __ \  \ \ \____  \ \  _-/ \ \  __ \  \ \  __ \  
+ \ \_\ \_\  \ \_____\  \ \_\    \ \_\ \_\  \ \_\ \_\ 
+  \/_/\/_/   \/_____/   \/_/     \/_/\/_/   \/_/\/_/ 
+                                                     
+</pre></center>
+<center>
+<div id="contentToWrite" style="display: none;" overline="" class="tip">
+<br>
+ALPHA Crawler TEAM MEMBERS: <br>
+1- D.Ashwin<br>
+2- Chandan Singh Rajput<br>
+3- Dheeraj Bhatia<br>
+============================================<br><br>
+[+] NAME : D.ASHWIN<br>
+[+] PROFESSION : STUDENT<br>
+[+] POSITION : CODER<br>
+[+] FACEBOOK : https://www.facebook.com/D.Ashwin55
+<br>
+<br>
+============================================
+<br><br>
+[+] NAME : Chandan Singh Rajput<br>
+[+] PROFESSION : STUDENT<br>
+[+] POSITION : CODER<br>
+[+] FACEBOOK : https://www.facebook.com/crajput05<br>
+<br>
+============================================
+<br><br>
+[+] NAME : Dheeraj Bhatia<br>
+[+] PROFESSION : STUDENT<br>
+[+] POSITION : CODER<br>
+[+] FACEBOOK : https://www.facebook.com/Mr.DheerajBhatia<br>
+<br>
+============================================<br>
+
+
+</div>
+		
+
+				<script type="text/javascript">
+
+writeContent(true);
+
+  </script>
+
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<title>Level 3-Color Security Check</title>
+
+<style>
+body{
+ background:url("img/2.jpg");
+ background-attachment: fixed;
+ background-repeat:no-repeat;
+}
+#B2{
+border:2px;
+border-style:dotted;
+border-color:red;
+border-radius:20px;
+height:50px;
+width:80px;
+}
+#new{
+background-color:black;
+height:230px;
+}
+</style>
+	
+</head>
+<body style="text-align:center;">
+
+
+<h2 style="color:white">Pick Your Color that you have choosed while registering in the website.</h2>
+
+	<script src="jscolor.js"></script>
+	<div id="new" >
+
+                    <h3>  Color Code Here</h3>
+	<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'};">Select Your Color from here</button>
+	<br><br><br>
+    
+	<input id="chosen-value" value="000000">
+
+	<script>
+	function setTextColor(picker) {
+		document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+	}
+	</script>
+	<br><br><br>
+<input id="B2" type="button" value="submit" onclick="javascript:validate()"/>
+
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("chosen-value").value == "FF0000" )
+    {
+        alert( "Login Successfull !" );
+        location.href="srs.html";
+    }
+    else
+    {
+        alert( "Oops... You are not the authorised user !!! \n Byeeee..." );
+        location.href="error.html";
+    }
+}
+</script>
+
+</div>
+</body>
+</html>
